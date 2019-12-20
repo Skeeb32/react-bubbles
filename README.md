@@ -1,4 +1,4 @@
-# Sprint Challenge: Advanced Web Applications - React Bubbles
+# Sprint Challenge: Advanced Web Applications - React Bubbles!
 
 This challenge allows you to practice the concepts and techniques learned over the past Sprint and apply them in a concrete project. This Sprint explored Advanced Web Applications, focusing on testing, client-side authentication, hosting web apps, and PUT and DELETE requests.
 
@@ -29,9 +29,17 @@ In this project you will create a login page and request a token from the server
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Explain what a token is used for.
+  A security token (sometimes called an authentication token) is a small hardware device that the owner carries to authorize access to a network service.
+
 - [ ] What steps can you take in your web apps to keep your data secure?
+  Most of the web apps we will work on will have some sort of authentication system. We want to protect any routes in our app from being rendered if the user is not authenticated with a token from the server.
+  As we build our web apps, we will most likely have some “protected” routes - routes that should only render with authentication. Normally, the client will make a login request, sending the server the user’s username and password. Then, the server will check those credentials against the database, and if it can authenticate the user, it will return a token. Once we have this token, we can add two layers of protection to our app. One uses protected routes, and the other sends an authentication header with our API calls (as we learned in the above objective).
+
 - [ ] Describe how web servers work.
+  Modern web services dealing with JSON data often use Jason Web Tokens (JWT)s instead. These tokens, issued by the server, are strings of cryptic text, which can be stored on the client-side using local storage or session storage. The server can readily tell the client that it issued the token. It can also read the token and make decisions for data transfer based on the client’s permission.
+
 - [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+  PUT is the “U” in CRUD, and it stands for UPDATE. We use the PUT method to change a resource’s information. PUT takes in a body object like POST and identifies data that needs to be updated somewhere.
 
 
 ## Project Set Up
